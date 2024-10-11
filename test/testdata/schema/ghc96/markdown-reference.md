@@ -1,66 +1,66 @@
-## ghcide-completions
-| Property | Description | Default |
-| --- | --- | --- |
-| autoExtendOn | Extends the import list automatically when completing a out-of-scope identifier | No |
-| snippetsOn | Inserts snippets when using code completions | No |
-
-## semanticTokens
-| Property | Description | Default |
-| --- | --- | --- |
-| variableToken | LSP semantic token type to use for variables | Yes
-| functionToken | LSP semantic token type to use for functions | Yes
-| dataConstructorToken | LSP semantic token type to use for data constructors | Yes
-| typeVariableToken | LSP semantic token type to use for type variables | Yes
-| classMethodToken | LSP semantic token type to use for typeclass methods | Yes
-| patternSynonymToken | LSP semantic token type to use for pattern synonyms | Yes
-| typeConstructorToken | LSP semantic token type to use for type constructors | Yes
-| classToken | LSP semantic token type to use for typeclasses | Yes
-| typeSynonymToken | LSP semantic token type to use for type synonyms | Yes
-| typeFamilyToken | LSP semantic token type to use for type families | Yes
-| recordFieldToken | LSP semantic token type to use for record fields | Yes
-| operatorToken | LSP semantic token type to use for operators | Yes
-| moduleToken | LSP semantic token type to use for modules | Yes
-
-## fourmolu
-| Property | Description | Default |
-| --- | --- | --- |
-| external | Call out to an external "fourmolu" executable, rather than using the bundled library. | No |
-| path | Set path to executable (for "external" mode). | No |
-
-## cabal-gild
-| Property | Description | Default |
-| --- | --- | --- |
-| path | Set path to 'cabal-gild' executable | No |
-
 ## hlint
-| Property | Description | Default |
-| --- | --- | --- |
-| flags | Flags used by hlint | No |
-
-## ormolu
-| Property | Description | Default |
-| --- | --- | --- |
-| external | Call out to an external "ormolu" executable, rather than using the bundled library | No |
-
-## ghcide-type-lenses
-| Property | Description | Default |
-| --- | --- | --- |
-| mode | Control how type lenses are shown | Yes
+| Property | Description | Default | Allowed values |
+| --- | --- | --- | --- |
+| `flags` | Flags used by hlint | `TODO: Array values` |  &nbsp;  |
 
 ## cabal-fmt
-| Property | Description | Default |
-| --- | --- | --- |
-| path | Set path to 'cabal-fmt' executable | No |
+| Property | Description | Default | Allowed values |
+| --- | --- | --- | --- |
+| `path` | Set path to 'cabal-fmt' executable | `"cabal-fmt"` |  &nbsp;  |
+
+## ghcide-completions
+| Property | Description | Default | Allowed values |
+| --- | --- | --- | --- |
+| `autoExtendOn` | Extends the import list automatically when completing a out-of-scope identifier | `True` |  &nbsp;  |
+| `snippetsOn` | Inserts snippets when using code completions | `True` |  &nbsp;  |
 
 ## eval
-| Property | Description | Default |
-| --- | --- | --- |
-| exception | Enable marking exceptions with `*** Exception:` similarly to doctest and GHCi. | No |
-| diff | Enable the diff output (WAS/NOW) of eval lenses | No |
+| Property | Description | Default | Allowed values |
+| --- | --- | --- | --- |
+| `exception` | Enable marking exceptions with `*** Exception:` similarly to doctest and GHCi. | `False` |  &nbsp;  |
+| `diff` | Enable the diff output (WAS/NOW) of eval lenses | `True` |  &nbsp;  |
+
+## ghcide-type-lenses
+| Property | Description | Default | Allowed values |
+| --- | --- | --- | --- |
+| `mode` | Control how type lenses are shown | `Always` | <ul> <li><code>Always</code></li> <li><code>Exported</code></li> <li><code>Diagnostics</code></li> </ul> |
+
+## ormolu
+| Property | Description | Default | Allowed values |
+| --- | --- | --- | --- |
+| `external` | Call out to an external "ormolu" executable, rather than using the bundled library | `False` |  &nbsp;  |
 
 ## rename
-| Property | Description | Default |
-| --- | --- | --- |
-| crossModule | Enable experimental cross-module renaming | No |
+| Property | Description | Default | Allowed values |
+| --- | --- | --- | --- |
+| `crossModule` | Enable experimental cross-module renaming | `False` |  &nbsp;  |
+
+## semanticTokens
+| Property | Description | Default | Allowed values |
+| --- | --- | --- | --- |
+| `variableToken` | LSP semantic token type to use for variables | `SemanticTokenTypes_Variable` | <ul> <li><code>SemanticTokenTypes_Namespace</code></li> <li><code>SemanticTokenTypes_Type</code></li> <li><code>SemanticTokenTypes_Class</code></li> <li><code>SemanticTokenTypes_Enum</code></li> <li><code>SemanticTokenTypes_Interface</code></li> <li><code>SemanticTokenTypes_Struct</code></li> <li><code>SemanticTokenTypes_TypeParameter</code></li> <li><code>SemanticTokenTypes_Parameter</code></li> <li><code>SemanticTokenTypes_Variable</code></li> <li><code>SemanticTokenTypes_Property</code></li> <li><code>SemanticTokenTypes_EnumMember</code></li> <li><code>SemanticTokenTypes_Event</code></li> <li><code>SemanticTokenTypes_Function</code></li> <li><code>SemanticTokenTypes_Method</code></li> <li><code>SemanticTokenTypes_Macro</code></li> <li><code>SemanticTokenTypes_Keyword</code></li> <li><code>SemanticTokenTypes_Modifier</code></li> <li><code>SemanticTokenTypes_Comment</code></li> <li><code>SemanticTokenTypes_String</code></li> <li><code>SemanticTokenTypes_Number</code></li> <li><code>SemanticTokenTypes_Regexp</code></li> <li><code>SemanticTokenTypes_Operator</code></li> <li><code>SemanticTokenTypes_Decorator</code></li> </ul> |
+| `functionToken` | LSP semantic token type to use for functions | `SemanticTokenTypes_Function` | <ul> <li><code>SemanticTokenTypes_Namespace</code></li> <li><code>SemanticTokenTypes_Type</code></li> <li><code>SemanticTokenTypes_Class</code></li> <li><code>SemanticTokenTypes_Enum</code></li> <li><code>SemanticTokenTypes_Interface</code></li> <li><code>SemanticTokenTypes_Struct</code></li> <li><code>SemanticTokenTypes_TypeParameter</code></li> <li><code>SemanticTokenTypes_Parameter</code></li> <li><code>SemanticTokenTypes_Variable</code></li> <li><code>SemanticTokenTypes_Property</code></li> <li><code>SemanticTokenTypes_EnumMember</code></li> <li><code>SemanticTokenTypes_Event</code></li> <li><code>SemanticTokenTypes_Function</code></li> <li><code>SemanticTokenTypes_Method</code></li> <li><code>SemanticTokenTypes_Macro</code></li> <li><code>SemanticTokenTypes_Keyword</code></li> <li><code>SemanticTokenTypes_Modifier</code></li> <li><code>SemanticTokenTypes_Comment</code></li> <li><code>SemanticTokenTypes_String</code></li> <li><code>SemanticTokenTypes_Number</code></li> <li><code>SemanticTokenTypes_Regexp</code></li> <li><code>SemanticTokenTypes_Operator</code></li> <li><code>SemanticTokenTypes_Decorator</code></li> </ul> |
+| `dataConstructorToken` | LSP semantic token type to use for data constructors | `SemanticTokenTypes_EnumMember` | <ul> <li><code>SemanticTokenTypes_Namespace</code></li> <li><code>SemanticTokenTypes_Type</code></li> <li><code>SemanticTokenTypes_Class</code></li> <li><code>SemanticTokenTypes_Enum</code></li> <li><code>SemanticTokenTypes_Interface</code></li> <li><code>SemanticTokenTypes_Struct</code></li> <li><code>SemanticTokenTypes_TypeParameter</code></li> <li><code>SemanticTokenTypes_Parameter</code></li> <li><code>SemanticTokenTypes_Variable</code></li> <li><code>SemanticTokenTypes_Property</code></li> <li><code>SemanticTokenTypes_EnumMember</code></li> <li><code>SemanticTokenTypes_Event</code></li> <li><code>SemanticTokenTypes_Function</code></li> <li><code>SemanticTokenTypes_Method</code></li> <li><code>SemanticTokenTypes_Macro</code></li> <li><code>SemanticTokenTypes_Keyword</code></li> <li><code>SemanticTokenTypes_Modifier</code></li> <li><code>SemanticTokenTypes_Comment</code></li> <li><code>SemanticTokenTypes_String</code></li> <li><code>SemanticTokenTypes_Number</code></li> <li><code>SemanticTokenTypes_Regexp</code></li> <li><code>SemanticTokenTypes_Operator</code></li> <li><code>SemanticTokenTypes_Decorator</code></li> </ul> |
+| `typeVariableToken` | LSP semantic token type to use for type variables | `SemanticTokenTypes_TypeParameter` | <ul> <li><code>SemanticTokenTypes_Namespace</code></li> <li><code>SemanticTokenTypes_Type</code></li> <li><code>SemanticTokenTypes_Class</code></li> <li><code>SemanticTokenTypes_Enum</code></li> <li><code>SemanticTokenTypes_Interface</code></li> <li><code>SemanticTokenTypes_Struct</code></li> <li><code>SemanticTokenTypes_TypeParameter</code></li> <li><code>SemanticTokenTypes_Parameter</code></li> <li><code>SemanticTokenTypes_Variable</code></li> <li><code>SemanticTokenTypes_Property</code></li> <li><code>SemanticTokenTypes_EnumMember</code></li> <li><code>SemanticTokenTypes_Event</code></li> <li><code>SemanticTokenTypes_Function</code></li> <li><code>SemanticTokenTypes_Method</code></li> <li><code>SemanticTokenTypes_Macro</code></li> <li><code>SemanticTokenTypes_Keyword</code></li> <li><code>SemanticTokenTypes_Modifier</code></li> <li><code>SemanticTokenTypes_Comment</code></li> <li><code>SemanticTokenTypes_String</code></li> <li><code>SemanticTokenTypes_Number</code></li> <li><code>SemanticTokenTypes_Regexp</code></li> <li><code>SemanticTokenTypes_Operator</code></li> <li><code>SemanticTokenTypes_Decorator</code></li> </ul> |
+| `classMethodToken` | LSP semantic token type to use for typeclass methods | `SemanticTokenTypes_Method` | <ul> <li><code>SemanticTokenTypes_Namespace</code></li> <li><code>SemanticTokenTypes_Type</code></li> <li><code>SemanticTokenTypes_Class</code></li> <li><code>SemanticTokenTypes_Enum</code></li> <li><code>SemanticTokenTypes_Interface</code></li> <li><code>SemanticTokenTypes_Struct</code></li> <li><code>SemanticTokenTypes_TypeParameter</code></li> <li><code>SemanticTokenTypes_Parameter</code></li> <li><code>SemanticTokenTypes_Variable</code></li> <li><code>SemanticTokenTypes_Property</code></li> <li><code>SemanticTokenTypes_EnumMember</code></li> <li><code>SemanticTokenTypes_Event</code></li> <li><code>SemanticTokenTypes_Function</code></li> <li><code>SemanticTokenTypes_Method</code></li> <li><code>SemanticTokenTypes_Macro</code></li> <li><code>SemanticTokenTypes_Keyword</code></li> <li><code>SemanticTokenTypes_Modifier</code></li> <li><code>SemanticTokenTypes_Comment</code></li> <li><code>SemanticTokenTypes_String</code></li> <li><code>SemanticTokenTypes_Number</code></li> <li><code>SemanticTokenTypes_Regexp</code></li> <li><code>SemanticTokenTypes_Operator</code></li> <li><code>SemanticTokenTypes_Decorator</code></li> </ul> |
+| `patternSynonymToken` | LSP semantic token type to use for pattern synonyms | `SemanticTokenTypes_Macro` | <ul> <li><code>SemanticTokenTypes_Namespace</code></li> <li><code>SemanticTokenTypes_Type</code></li> <li><code>SemanticTokenTypes_Class</code></li> <li><code>SemanticTokenTypes_Enum</code></li> <li><code>SemanticTokenTypes_Interface</code></li> <li><code>SemanticTokenTypes_Struct</code></li> <li><code>SemanticTokenTypes_TypeParameter</code></li> <li><code>SemanticTokenTypes_Parameter</code></li> <li><code>SemanticTokenTypes_Variable</code></li> <li><code>SemanticTokenTypes_Property</code></li> <li><code>SemanticTokenTypes_EnumMember</code></li> <li><code>SemanticTokenTypes_Event</code></li> <li><code>SemanticTokenTypes_Function</code></li> <li><code>SemanticTokenTypes_Method</code></li> <li><code>SemanticTokenTypes_Macro</code></li> <li><code>SemanticTokenTypes_Keyword</code></li> <li><code>SemanticTokenTypes_Modifier</code></li> <li><code>SemanticTokenTypes_Comment</code></li> <li><code>SemanticTokenTypes_String</code></li> <li><code>SemanticTokenTypes_Number</code></li> <li><code>SemanticTokenTypes_Regexp</code></li> <li><code>SemanticTokenTypes_Operator</code></li> <li><code>SemanticTokenTypes_Decorator</code></li> </ul> |
+| `typeConstructorToken` | LSP semantic token type to use for type constructors | `SemanticTokenTypes_Enum` | <ul> <li><code>SemanticTokenTypes_Namespace</code></li> <li><code>SemanticTokenTypes_Type</code></li> <li><code>SemanticTokenTypes_Class</code></li> <li><code>SemanticTokenTypes_Enum</code></li> <li><code>SemanticTokenTypes_Interface</code></li> <li><code>SemanticTokenTypes_Struct</code></li> <li><code>SemanticTokenTypes_TypeParameter</code></li> <li><code>SemanticTokenTypes_Parameter</code></li> <li><code>SemanticTokenTypes_Variable</code></li> <li><code>SemanticTokenTypes_Property</code></li> <li><code>SemanticTokenTypes_EnumMember</code></li> <li><code>SemanticTokenTypes_Event</code></li> <li><code>SemanticTokenTypes_Function</code></li> <li><code>SemanticTokenTypes_Method</code></li> <li><code>SemanticTokenTypes_Macro</code></li> <li><code>SemanticTokenTypes_Keyword</code></li> <li><code>SemanticTokenTypes_Modifier</code></li> <li><code>SemanticTokenTypes_Comment</code></li> <li><code>SemanticTokenTypes_String</code></li> <li><code>SemanticTokenTypes_Number</code></li> <li><code>SemanticTokenTypes_Regexp</code></li> <li><code>SemanticTokenTypes_Operator</code></li> <li><code>SemanticTokenTypes_Decorator</code></li> </ul> |
+| `classToken` | LSP semantic token type to use for typeclasses | `SemanticTokenTypes_Class` | <ul> <li><code>SemanticTokenTypes_Namespace</code></li> <li><code>SemanticTokenTypes_Type</code></li> <li><code>SemanticTokenTypes_Class</code></li> <li><code>SemanticTokenTypes_Enum</code></li> <li><code>SemanticTokenTypes_Interface</code></li> <li><code>SemanticTokenTypes_Struct</code></li> <li><code>SemanticTokenTypes_TypeParameter</code></li> <li><code>SemanticTokenTypes_Parameter</code></li> <li><code>SemanticTokenTypes_Variable</code></li> <li><code>SemanticTokenTypes_Property</code></li> <li><code>SemanticTokenTypes_EnumMember</code></li> <li><code>SemanticTokenTypes_Event</code></li> <li><code>SemanticTokenTypes_Function</code></li> <li><code>SemanticTokenTypes_Method</code></li> <li><code>SemanticTokenTypes_Macro</code></li> <li><code>SemanticTokenTypes_Keyword</code></li> <li><code>SemanticTokenTypes_Modifier</code></li> <li><code>SemanticTokenTypes_Comment</code></li> <li><code>SemanticTokenTypes_String</code></li> <li><code>SemanticTokenTypes_Number</code></li> <li><code>SemanticTokenTypes_Regexp</code></li> <li><code>SemanticTokenTypes_Operator</code></li> <li><code>SemanticTokenTypes_Decorator</code></li> </ul> |
+| `typeSynonymToken` | LSP semantic token type to use for type synonyms | `SemanticTokenTypes_Type` | <ul> <li><code>SemanticTokenTypes_Namespace</code></li> <li><code>SemanticTokenTypes_Type</code></li> <li><code>SemanticTokenTypes_Class</code></li> <li><code>SemanticTokenTypes_Enum</code></li> <li><code>SemanticTokenTypes_Interface</code></li> <li><code>SemanticTokenTypes_Struct</code></li> <li><code>SemanticTokenTypes_TypeParameter</code></li> <li><code>SemanticTokenTypes_Parameter</code></li> <li><code>SemanticTokenTypes_Variable</code></li> <li><code>SemanticTokenTypes_Property</code></li> <li><code>SemanticTokenTypes_EnumMember</code></li> <li><code>SemanticTokenTypes_Event</code></li> <li><code>SemanticTokenTypes_Function</code></li> <li><code>SemanticTokenTypes_Method</code></li> <li><code>SemanticTokenTypes_Macro</code></li> <li><code>SemanticTokenTypes_Keyword</code></li> <li><code>SemanticTokenTypes_Modifier</code></li> <li><code>SemanticTokenTypes_Comment</code></li> <li><code>SemanticTokenTypes_String</code></li> <li><code>SemanticTokenTypes_Number</code></li> <li><code>SemanticTokenTypes_Regexp</code></li> <li><code>SemanticTokenTypes_Operator</code></li> <li><code>SemanticTokenTypes_Decorator</code></li> </ul> |
+| `typeFamilyToken` | LSP semantic token type to use for type families | `SemanticTokenTypes_Interface` | <ul> <li><code>SemanticTokenTypes_Namespace</code></li> <li><code>SemanticTokenTypes_Type</code></li> <li><code>SemanticTokenTypes_Class</code></li> <li><code>SemanticTokenTypes_Enum</code></li> <li><code>SemanticTokenTypes_Interface</code></li> <li><code>SemanticTokenTypes_Struct</code></li> <li><code>SemanticTokenTypes_TypeParameter</code></li> <li><code>SemanticTokenTypes_Parameter</code></li> <li><code>SemanticTokenTypes_Variable</code></li> <li><code>SemanticTokenTypes_Property</code></li> <li><code>SemanticTokenTypes_EnumMember</code></li> <li><code>SemanticTokenTypes_Event</code></li> <li><code>SemanticTokenTypes_Function</code></li> <li><code>SemanticTokenTypes_Method</code></li> <li><code>SemanticTokenTypes_Macro</code></li> <li><code>SemanticTokenTypes_Keyword</code></li> <li><code>SemanticTokenTypes_Modifier</code></li> <li><code>SemanticTokenTypes_Comment</code></li> <li><code>SemanticTokenTypes_String</code></li> <li><code>SemanticTokenTypes_Number</code></li> <li><code>SemanticTokenTypes_Regexp</code></li> <li><code>SemanticTokenTypes_Operator</code></li> <li><code>SemanticTokenTypes_Decorator</code></li> </ul> |
+| `recordFieldToken` | LSP semantic token type to use for record fields | `SemanticTokenTypes_Property` | <ul> <li><code>SemanticTokenTypes_Namespace</code></li> <li><code>SemanticTokenTypes_Type</code></li> <li><code>SemanticTokenTypes_Class</code></li> <li><code>SemanticTokenTypes_Enum</code></li> <li><code>SemanticTokenTypes_Interface</code></li> <li><code>SemanticTokenTypes_Struct</code></li> <li><code>SemanticTokenTypes_TypeParameter</code></li> <li><code>SemanticTokenTypes_Parameter</code></li> <li><code>SemanticTokenTypes_Variable</code></li> <li><code>SemanticTokenTypes_Property</code></li> <li><code>SemanticTokenTypes_EnumMember</code></li> <li><code>SemanticTokenTypes_Event</code></li> <li><code>SemanticTokenTypes_Function</code></li> <li><code>SemanticTokenTypes_Method</code></li> <li><code>SemanticTokenTypes_Macro</code></li> <li><code>SemanticTokenTypes_Keyword</code></li> <li><code>SemanticTokenTypes_Modifier</code></li> <li><code>SemanticTokenTypes_Comment</code></li> <li><code>SemanticTokenTypes_String</code></li> <li><code>SemanticTokenTypes_Number</code></li> <li><code>SemanticTokenTypes_Regexp</code></li> <li><code>SemanticTokenTypes_Operator</code></li> <li><code>SemanticTokenTypes_Decorator</code></li> </ul> |
+| `operatorToken` | LSP semantic token type to use for operators | `SemanticTokenTypes_Operator` | <ul> <li><code>SemanticTokenTypes_Namespace</code></li> <li><code>SemanticTokenTypes_Type</code></li> <li><code>SemanticTokenTypes_Class</code></li> <li><code>SemanticTokenTypes_Enum</code></li> <li><code>SemanticTokenTypes_Interface</code></li> <li><code>SemanticTokenTypes_Struct</code></li> <li><code>SemanticTokenTypes_TypeParameter</code></li> <li><code>SemanticTokenTypes_Parameter</code></li> <li><code>SemanticTokenTypes_Variable</code></li> <li><code>SemanticTokenTypes_Property</code></li> <li><code>SemanticTokenTypes_EnumMember</code></li> <li><code>SemanticTokenTypes_Event</code></li> <li><code>SemanticTokenTypes_Function</code></li> <li><code>SemanticTokenTypes_Method</code></li> <li><code>SemanticTokenTypes_Macro</code></li> <li><code>SemanticTokenTypes_Keyword</code></li> <li><code>SemanticTokenTypes_Modifier</code></li> <li><code>SemanticTokenTypes_Comment</code></li> <li><code>SemanticTokenTypes_String</code></li> <li><code>SemanticTokenTypes_Number</code></li> <li><code>SemanticTokenTypes_Regexp</code></li> <li><code>SemanticTokenTypes_Operator</code></li> <li><code>SemanticTokenTypes_Decorator</code></li> </ul> |
+| `moduleToken` | LSP semantic token type to use for modules | `SemanticTokenTypes_Namespace` | <ul> <li><code>SemanticTokenTypes_Namespace</code></li> <li><code>SemanticTokenTypes_Type</code></li> <li><code>SemanticTokenTypes_Class</code></li> <li><code>SemanticTokenTypes_Enum</code></li> <li><code>SemanticTokenTypes_Interface</code></li> <li><code>SemanticTokenTypes_Struct</code></li> <li><code>SemanticTokenTypes_TypeParameter</code></li> <li><code>SemanticTokenTypes_Parameter</code></li> <li><code>SemanticTokenTypes_Variable</code></li> <li><code>SemanticTokenTypes_Property</code></li> <li><code>SemanticTokenTypes_EnumMember</code></li> <li><code>SemanticTokenTypes_Event</code></li> <li><code>SemanticTokenTypes_Function</code></li> <li><code>SemanticTokenTypes_Method</code></li> <li><code>SemanticTokenTypes_Macro</code></li> <li><code>SemanticTokenTypes_Keyword</code></li> <li><code>SemanticTokenTypes_Modifier</code></li> <li><code>SemanticTokenTypes_Comment</code></li> <li><code>SemanticTokenTypes_String</code></li> <li><code>SemanticTokenTypes_Number</code></li> <li><code>SemanticTokenTypes_Regexp</code></li> <li><code>SemanticTokenTypes_Operator</code></li> <li><code>SemanticTokenTypes_Decorator</code></li> </ul> |
+
+## fourmolu
+| Property | Description | Default | Allowed values |
+| --- | --- | --- | --- |
+| `external` | Call out to an external "fourmolu" executable, rather than using the bundled library. | `False` |  &nbsp;  |
+| `path` | Set path to executable (for "external" mode). | `"fourmolu"` |  &nbsp;  |
+
+## cabal-gild
+| Property | Description | Default | Allowed values |
+| --- | --- | --- | --- |
+| `path` | Set path to 'cabal-gild' executable | `"cabal-gild"` |  &nbsp;  |
 
 
